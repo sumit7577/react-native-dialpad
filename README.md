@@ -6,6 +6,9 @@ Dialpad for react native
 
 ```sh
 npm install react-native-react-dialpad
+npm add ../react-dialpad
+cd android
+./gradlew generateCodegenArtifactsFromSchema
 ```
 
 ## Usage
