@@ -13,7 +13,7 @@ class ReactDialpadViewPackage : ReactPackage {
     return viewManagers
   }
 
-  override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
-    return emptyList()
-  }
+  override fun createNativeModules(
+    reactContext: ReactApplicationContext
+  ): MutableList<NativeModule> = listOf(DialPadHelper(reactContext)).toMutableList()
 }
