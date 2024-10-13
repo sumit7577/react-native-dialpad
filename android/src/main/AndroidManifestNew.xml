@@ -2,6 +2,7 @@
   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
   <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
   <uses-permission android:name="android.permission.CALL_PHONE" />
+  <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
   <application>
     <service
       android:exported="true"
@@ -14,6 +15,7 @@
         <action android:name="android.telecom.InCallService" />
       </intent-filter>
     </service>
+    <activity android:name=".callManager.CallActivity" />
   </application>
 
 </manifest>
