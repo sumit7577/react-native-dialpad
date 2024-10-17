@@ -31,8 +31,6 @@ class DialPadHelper(reactContext: ReactApplicationContext) : ReactContextBaseJav
       val packageName = reactApplicationContext.packageName
       val defaultDialerPackage = telecomManager.defaultDialerPackage
 
-      Toast.makeText(reactApplicationContext, packageName, Toast.LENGTH_LONG).show()
-
       if (packageName != defaultDialerPackage) {
         val intent = Intent(ACTION_CHANGE_DEFAULT_DIALER)
           .putExtra(EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME, packageName)
@@ -56,7 +54,6 @@ class DialPadHelper(reactContext: ReactApplicationContext) : ReactContextBaseJav
     // Create the request role intent
     val intent = roleManager?.createRequestRoleIntent(RoleManager.ROLE_DIALER)
     activity?.startActivityForResult(intent,1)
-    Toast.makeText(reactApplicationContext,activity!!.packageName,Toast.LENGTH_LONG).show()
   }
 
   companion object{
